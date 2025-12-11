@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/bskyper/air-boss-support/discussions
+    about: For general questions and community discussions
+  - name: 📚 Documentation
+    url: https://your-docs-url-if-you-have-one
+    about: Read the documentation (if you have docs)
