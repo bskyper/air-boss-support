@@ -1,0 +1,82 @@
+name: 📱 UI/UX Improvement
+description: Suggest improvements to the user interface or experience
+title: "[UI/UX] "
+labels: ["type: ui-ux", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the Air Boss user experience!
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platform needs this improvement?
+      multiple: true
+      options:
+        - iOS Mobile App
+        - Android Mobile App
+        - Web Application
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area of Application
+      description: Which part of the app does this affect?
+      options:
+        - Flight Logging
+        - Aircraft Management
+        - Reservations/Scheduling
+        - Club Management
+        - User Profile
+        - Billing/Invoices
+        - Notifications
+        - Navigation/Menu
+        - General Design
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Experience
+      description: Describe the current UI/UX
+      placeholder: Currently, when I...
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this?
+      placeholder: It would be better if...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: User Benefit
+      description: How would this improve the user experience?
+      placeholder: This would help users...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Mockups
+      description: Show us what you mean (current state or mockup of improvement)
+      placeholder: Drag and drop images here
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context or examples
+      placeholder: For example, similar to...
