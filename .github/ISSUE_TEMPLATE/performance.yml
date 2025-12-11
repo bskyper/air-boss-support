@@ -1,0 +1,95 @@
+name: ⚡ Performance Issue
+description: Report slow performance, crashes, or resource issues
+title: "[PERFORMANCE] "
+labels: ["type: performance", "status: new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us identify and fix performance issues!
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platform is experiencing the issue?
+      multiple: true
+      options:
+        - iOS Mobile App
+        - Android Mobile App
+        - Web Application
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Performance Issue
+      description: What kind of performance problem is this?
+      options:
+        - Slow Loading
+        - App Crash
+        - App Freeze/Hang
+        - High Battery Usage
+        - High Memory Usage
+        - Slow Response Time
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the performance issue
+      placeholder: When I do X, the app...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this performance issue?
+      placeholder: |
+        1. Go to '...'
+        2. Perform action '...'
+        3. Notice slowdown/crash
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this happen?
+      options:
+        - Always
+        - Often (>50%)
+        - Sometimes (25-50%)
+        - Rarely (<25%)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device Information
+      description: What device are you using?
+      placeholder: e.g., iPhone 14 Pro, Samsung Galaxy S23, Chrome on Mac
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect your use of the app?
+      placeholder: This makes it difficult to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any crash logs, error messages, or other details
+      placeholder: Error logs, screenshots, etc.
