@@ -1,77 +1,57 @@
 name: ✨ Feature Request
-description: Suggest a new feature or enhancement
-title: "[FEATURE] "
-labels: ["type: feature", "status: new"]
+description: Suggest a new feature or improvement
+title: "[Feature] "
+labels: ["enhancement", "needs-review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a feature! We appreciate your input.
-
-  - type: dropdown
-    id: platform
-    attributes:
-      label: Platform
-      description: Which platform(s) should have this feature?
-      multiple: true
-      options:
-        - iOS Mobile App
-        - Android Mobile App
-        - Web Application
-        - All Platforms
-    validations:
-      required: true
+        Thanks for suggesting a feature! We'd love to hear your ideas for making Air Boss better.
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem Statement
-      description: What problem does this feature solve?
-      placeholder: I'm always frustrated when...
+      label: What problem would this solve?
+      description: Is there something frustrating or missing in the current app?
+      placeholder: "Example: It's hard to see all my scheduled flights for the month at once"
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Proposed Solution
-      description: Describe the solution you'd like
-      placeholder: I think it would be great if...
-    validations:
-      required: true
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives Considered
-      description: Have you considered any alternative solutions or features?
-      placeholder: I also thought about...
-
-  - type: textarea
-    id: use-case
-    attributes:
-      label: Use Case
-      description: How would you use this feature?
-      placeholder: As a [type of user], I would...
+      label: What would you like to see?
+      description: Describe your ideal solution or feature
+      placeholder: "Example: A calendar view showing all upcoming flights with color-coding for different aircraft"
     validations:
       required: true
 
   - type: dropdown
     id: priority
     attributes:
-      label: Priority
-      description: How important is this feature to you?
+      label: How important is this to you?
       options:
-        - Critical - Blocking my workflow
-        - High - Would significantly improve experience
-        - Medium - Nice to have
-        - Low - Small improvement
+        - Critical - I can't use the app without this
+        - High - Would make my life much easier
+        - Medium - Would be nice to have
+        - Low - Just an idea
     validations:
-      required: true
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Any other ideas or workarounds?
+      description: Are there other ways to solve this problem?
+      placeholder: "Example: Or maybe a weekly summary email instead of a calendar view"
+    validations:
+      required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional Context
-      description: Add any other context, screenshots, or mockups
-      placeholder: Any additional information...
+      label: Additional context
+      description: Anything else we should know?
+      placeholder: Screenshots from other apps, mockups, or any other helpful info
+    validations:
+      required: false

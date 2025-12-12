@@ -1,98 +1,82 @@
-
 name: 🐛 Bug Report
 description: Report a bug or issue with Air Boss
-title: "[BUG] "
-labels: ["type: bug", "status: new"]
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report this bug! Please provide as much detail as possible.
-
-  - type: dropdown
-    id: platform
-    attributes:
-      label: Platform
-      description: Which platform(s) are affected?
-      multiple: true
-      options:
-        - iOS Mobile App
-        - Android Mobile App
-        - Web Application
-    validations:
-      required: true
+        Thanks for taking the time to report a bug! Please fill out the information below so we can fix it quickly.
 
   - type: input
-    id: version
+    id: device
     attributes:
-      label: Version
-      description: What version are you using? (Check in app settings)
-      placeholder: e.g., 2.2.6 (Build 147)
-    validations:
-      required: false
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Bug Description
-      description: A clear and concise description of what the bug is
-      placeholder: Tell us what went wrong...
+      label: Device
+      description: What device are you using?
+      placeholder: "Example: iPhone 14 Pro, iPad Air, Samsung Galaxy S23"
     validations:
       required: true
 
   - type: textarea
-    id: steps
+    id: bug-description
     attributes:
-      label: Steps to Reproduce
-      description: How can we reproduce this issue?
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. See error
+      label: What happened?
+      description: Describe the bug you encountered
+      placeholder: "Example: When I tap the schedule button, the app crashes and closes"
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: I expected...
+      label: What did you expect to happen?
+      description: What should have happened instead?
+      placeholder: "Example: The schedule should open showing my flight list"
     validations:
       required: true
 
   - type: textarea
-    id: actual
+    id: steps
     attributes:
-      label: Actual Behavior
-      description: What actually happened?
-      placeholder: Instead, what happened was...
+      label: Steps to reproduce
+      description: How can we make this happen again?
+      placeholder: |
+        1. Open the app
+        2. Tap on 'Schedule' button
+        3. App crashes
+      value: |
+        1.
+        2.
+        3.
     validations:
-      required: true
+      required: false
 
-  - type: textarea
-    id: screenshots
+  - type: input
+    id: version
     attributes:
-      label: Screenshots
-      description: If applicable, add screenshots to help explain your problem
-      placeholder: Drag and drop images here or paste URLs
+      label: App Version
+      description: What version of Air Boss are you using? (Find this in Settings → About)
+      placeholder: "Example: 1.2.3"
+    validations:
+      required: false
 
   - type: dropdown
-    id: severity
+    id: frequency
     attributes:
-      label: Severity
-      description: How severe is this issue?
+      label: How often does this happen?
       options:
-        - Critical - App is unusable
-        - High - Major feature broken
-        - Medium - Feature partially broken
-        - Low - Minor inconvenience
+        - Every time
+        - Sometimes
+        - Just once
+        - Not sure
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional Context
-      description: Add any other context about the problem here
-      placeholder: Any additional information...
+      label: Additional information
+      description: Any other details that might help? (Screenshots are great!)
+      placeholder: You can paste screenshots directly here by dragging and dropping
+    validations:
+      required: false

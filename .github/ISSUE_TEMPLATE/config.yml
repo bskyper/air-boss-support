@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 💬 GitHub Discussions
-    url: https://github.com/bskyper/air-boss-support/discussions
-    about: For general questions and community discussions
-  - name: 🌐 Air Boss Website
-    url: https://www.air-boss.club
-    about: Visit the Air Boss website
+  - name: 💬 Ask a Question
+    url: https://github.com/bskyper/air-boss-support/discussions/new?category=help
+    about: Have a question? Ask the community in Discussions
+  - name: 📋 View All Issues
+    url: https://github.com/bskyper/air-boss-support/issues
+    about: Browse existing bug reports and feature requests
