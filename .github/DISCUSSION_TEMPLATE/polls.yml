@@ -1,0 +1,33 @@
+title: "[Poll] "
+labels: ["poll"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        📊 Create a poll to gather community feedback.
+  
+  - type: textarea
+    id: question
+    attributes:
+      label: Poll Question
+      description: What would you like to ask the community?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: options
+    attributes:
+      label: Poll Options
+      description: List the options (one per line)
+      placeholder: |
+        Option 1
+        Option 2
+        Option 3
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Provide any background information for the poll
