@@ -1,0 +1,41 @@
+title: "[Help] "
+labels: ["help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🆘 Ask the community for help with Air Boss.
+        
+        For bug reports, please use [Issues](https://github.com/bskyper/air-boss-support/issues/new/choose) instead.
+  
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - iOS Mobile App
+        - Android Mobile App
+        - Web Application
+    validations:
+      required: true
+  
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe your question or problem
+    validations:
+      required: true
+  
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Let us know what you've already attempted
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, error messages, or other helpful information
