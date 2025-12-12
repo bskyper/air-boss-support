@@ -1,0 +1,15 @@
+title: "[Announcement] "
+labels: ["announcement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        📢 Use this template for official announcements about Air Boss updates, releases, and news.
+  
+  - type: textarea
+    id: announcement
+    attributes:
+      label: Announcement
+      description: Share important updates with the community
+    validations:
+      required: true
