@@ -1,0 +1,43 @@
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! We'd love to hear your ideas.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Is there something frustrating or missing?
+      placeholder: "Example: It's hard to see all my scheduled flights at once"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to see?
+      description: Describe your ideal solution
+      placeholder: "Example: A calendar view showing all upcoming flights"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Any other ideas?
+      description: Are there other ways to solve this problem?
+      placeholder: "Example: Or maybe a weekly summary email"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else we should know?
+      placeholder: Screenshots, examples from other apps, etc.
+    validations:
+      required: false
