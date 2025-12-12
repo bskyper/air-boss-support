@@ -17,6 +17,9 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
         }
 
@@ -24,238 +27,203 @@
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 40px;
-            max-width: 700px;
-            margin: 40px auto;
+            padding: 60px;
+            max-width: 800px;
+            text-align: center;
         }
 
         h1 {
             color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
         }
 
         .subtitle {
-            text-align: center;
+            font-size: 1.3em;
             color: #666;
             margin-bottom: 40px;
-            font-size: 1.1em;
         }
 
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        label .required {
-            color: #e74c3c;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
             color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .btn-submit:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
         }
 
-        .btn-submit:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .alert {
-            padding: 15px 20px;
-            border-radius: 8px;
+        .cta-section p {
+            font-size: 1.1em;
             margin-bottom: 25px;
-            display: none;
+            opacity: 0.95;
         }
 
-        .alert.show {
-            display: block;
-        }
-
-        .alert-success {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-        }
-
-        .alert-error {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-        }
-
-        .footer-links {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .footer-links a {
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
             color: #667eea;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.95em;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
         }
 
-        .footer-links a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .helper-text {
-            font-size: 0.9em;
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #2196f3;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-box li {
+            margin: 8px 0;
+        }
+
+        .features {
+            margin-top: 50px;
+            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .feature p {
             color: #666;
-            margin-top: 5px;
+        }
+
+        .emoji {
+            font-size: 2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            color: #999;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>✈️ Air Boss Support</h1>
-        <p class="subtitle">Submit a bug report or feature request</p>
+        <p class="subtitle">Get help, report bugs, and request features</p>
 
-        <div id="successAlert" class="alert alert-success">
-            ✅ Thank you! Your request has been submitted successfully. We'll review it shortly.
+        <div class="cta-section">
+            <h2>🐛 Report a Bug or Request a Feature</h2>
+            <p>Click below to share your feedback. You'll need a free GitHub account (takes 30 seconds to create).</p>
+            <a href="https://github.com/bskyper/air-boss-support/discussions/new?category=general" class="btn">
+                💬 Submit Bug or Request
+            </a>
+            <br>
+            <a href="https://github.com/signup" class="btn btn-secondary">
+                📝 Create Free Account First
+            </a>
         </div>
 
-        <div id="errorAlert" class="alert alert-error">
-            ❌ <span id="errorMessage">Something went wrong. Please try again.</span>
+        <div class="info-box">
+            <h3>📌 Why GitHub Discussions?</h3>
+            <p><strong>It's simple and free:</strong></p>
+            <ul>
+                <li>✅ <strong>No complex setup</strong> - Just like posting on a forum</li>
+                <li>✅ <strong>Track your submissions</strong> - See status updates in real-time</li>
+                <li>✅ <strong>Community support</strong> - Help other pilots and get help</li>
+                <li>✅ <strong>Free GitHub account</strong> - Same account works everywhere</li>
+            </ul>
         </div>
 
-        <form id="supportForm">
-            <div class="form-group">
-                <label for="name">Your Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required placeholder="e.g., John Smith">
+        <div class="features">
+            <div class="feature">
+                <span class="emoji">🐛</span>
+                <h3>Bug Reports</h3>
+                <p>Found something broken? Report it so we can fix it quickly.</p>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="e.g., pilot@example.com">
-                <div class="helper-text">We'll use this to follow up if needed</div>
+            <div class="feature">
+                <span class="emoji">✨</span>
+                <h3>Feature Requests</h3>
+                <p>Have an idea to make Air Boss better? We want to hear it!</p>
             </div>
 
-            <div class="form-group">
-                <label for="type">Issue Type <span class="required">*</span></label>
-                <select id="type" name="type" required>
-                    <option value="">Select type...</option>
-                    <option value="bug">🐛 Bug Report</option>
-                    <option value="feature">✨ Feature Request</option>
-                    <option value="question">❓ Question</option>
-                    <option value="other">💬 Other</option>
-                </select>
+            <div class="feature">
+                <span class="emoji">❓</span>
+                <h3>Questions</h3>
+                <p>Not sure how something works? Ask away!</p>
             </div>
 
-            <div class="form-group">
-                <label for="subject">Subject <span class="required">*</span></label>
-                <input type="text" id="subject" name="subject" required placeholder="Brief description of the issue">
+            <div class="feature">
+                <span class="emoji">💬</span>
+                <h3>Community</h3>
+                <p>Connect with other pilots using Air Boss.</p>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label for="description">Description <span class="required">*</span></label>
-                <textarea id="description" name="description" required placeholder="Please provide details about your issue or request..."></textarea>
-                <div class="helper-text">The more details you provide, the better we can help</div>
-            </div>
-
-            <button type="submit" class="btn-submit" id="submitBtn">
-                Submit Request
-            </button>
-        </form>
-
-        <div class="footer-links">
-            <a href="https://github.com/bskyper/air-boss-support/issues" target="_blank">📋 View All Issues</a>
-            <a href="https://github.com/bskyper/air-boss-support" target="_blank">🔗 GitHub Repository</a>
+        <div class="footer">
+            <p>
+                <a href="https://github.com/bskyper/air-boss-support/discussions" style="color: #667eea;">View All Discussions</a> •
+                <a href="https://github.com/bskyper/air-boss-support" style="color: #667eea;">GitHub Repository</a>
+            </p>
+            <p style="margin-top: 15px;">Air Boss Support Portal • Powered by GitHub</p>
         </div>
     </div>
-
-    <script>
-        const form = document.getElementById('supportForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successAlert = document.getElementById('successAlert');
-        const errorAlert = document.getElementById('errorAlert');
-        const errorMessage = document.getElementById('errorMessage');
-
-        // Temporary solution: Using a GitHub Action webhook
-        // You'll need to set up a GitHub Action or serverless function
-        const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // Replace this
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Hide alerts
-            successAlert.classList.remove('show');
-            errorAlert.classList.remove('show');
-
-            // Disable button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
-
-            try {
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData);
-
-                // For now, show success and provide instructions
-                // In production, this would submit to your backend
-                console.log('Form data:', data);
-
-                // Simulate API call
-                await new Promise(resolve => setTimeout(resolve, 1000));
-
-                // Show success
-                successAlert.classList.add('show');
-                form.reset();
-
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            } catch (error) {
-                console.error('Submission error:', error);
-                errorMessage.textContent = 'Unable to submit your request. Please try again or email us directly.';
-                errorAlert.classList.add('show');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Request';
-            }
-        });
-    </script>
 </body>
 </html>
