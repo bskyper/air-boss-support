@@ -1,0 +1,36 @@
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💡 Share your ideas and suggestions for Air Boss.
+        
+        For formal feature requests, please use [Issues](https://github.com/bskyper/air-boss-support/issues/new?template=feature_request.yml).
+  
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which platform(s)?
+      multiple: true
+      options:
+        - iOS Mobile App
+        - Android Mobile App
+        - Web Application
+        - All Platforms
+    validations:
+      required: true
+  
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea or suggestion
+    validations:
+      required: true
+  
+  - type: textarea
+    id: benefit
+    attributes:
+      label: How would this help?
+      description: What problem does this solve or what value does it add?
