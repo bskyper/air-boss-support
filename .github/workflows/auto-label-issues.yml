@@ -1,0 +1,83 @@
+name: Auto Label Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Auto-label based on template
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+            const title = issue.title || '';
+            const labels = [];
+
+            // Detect platform from issue body
+            if (body.includes('iOS Mobile App')) {
+              labels.push('platform: mobile-ios');
+            }
+            if (body.includes('Android Mobile App')) {
+              labels.push('platform: mobile-android');
+            }
+            if (body.includes('Web Application')) {
+              labels.push('platform: web');
+            }
+
+            // Detect issue type from title prefix
+            if (title.startsWith('[BUG]')) {
+              labels.push('type: bug');
+            } else if (title.startsWith('[FEATURE]')) {
+              labels.push('type: feature');
+            } else if (title.startsWith('[UI/UX]')) {
+              labels.push('type: ui-ux');
+            } else if (title.startsWith('[PERFORMANCE]')) {
+              labels.push('type: performance');
+            } else if (title.startsWith('[QUESTION]')) {
+              labels.push('type: question');
+            }
+
+            // Detect priority from severity/priority field
+            if (body.includes('Critical')) {
+              labels.push('priority: critical');
+            } else if (body.includes('High')) {
+              labels.push('priority: high');
+            } else if (body.includes('Medium')) {
+              labels.push('priority: medium');
+            } else if (body.includes('Low')) {
+              labels.push('priority: low');
+            }
+
+            // Add labels if any were detected
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+            }
+
+            // Add a welcome comment for first-time contributors
+            const issueCreator = issue.user.login;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              creator: issueCreator,
+              state: 'all'
+            });
+
+            if (issues.length === 1) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `👋 Thanks for opening your first issue! We appreciate your feedback and will review it soon.\n\n✈️ The Air Boss Team`
+              });
+            }
