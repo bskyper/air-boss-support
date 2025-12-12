@@ -1,0 +1,27 @@
+title: ""
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💬 Start a general discussion about Air Boss, share ideas, or connect with other users.
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: Discussion Category
+      options:
+        - General Discussion
+        - Best Practices
+        - Tips & Tricks
+        - Community Showcase
+        - Other
+    validations:
+      required: true
+  
+  - type: textarea
+    id: content
+    attributes:
+      label: What would you like to discuss?
+    validations:
+      required: true
